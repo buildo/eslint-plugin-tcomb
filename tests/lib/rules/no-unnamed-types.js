@@ -49,7 +49,7 @@ ruleTester.run('no-unnamed-types', rule, {
       code: 't.interface({}, \'MyType\')'
     },
     {
-      code: 't.interface.extend({}, \'MyType\')'
+      code: 't.interface.extend([Type, {}], \'MyType\')'
     },
     {
       code: 't.func([A], B, \'MyType\')'
@@ -66,11 +66,19 @@ ruleTester.run('no-unnamed-types', rule, {
       errors: [ { message: 'enums must have a name' } ],
     },
     {
+      code: 't.enums.of({ IT: \'IT\' })',
+      errors: [ { message: 'enums must have a name' } ],
+    },
+    {
       code: 't.maybe(t.String)',
       errors: [ { message: 'maybe must have a name' } ],
     },
     {
       code: 't.struct({})',
+      errors: [ { message: 'struct must have a name' } ],
+    },
+    {
+      code: 't.struct.extend([Type, {}])',
       errors: [ { message: 'struct must have a name' } ],
     },
     {
@@ -95,6 +103,10 @@ ruleTester.run('no-unnamed-types', rule, {
     },
     {
       code: 't.interface({})',
+      errors: [ { message: 'interface must have a name' } ],
+    },
+    {
+      code: 't.interface.extend([Type, {}])',
       errors: [ { message: 'interface must have a name' } ],
     },
     {
