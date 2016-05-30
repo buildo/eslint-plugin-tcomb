@@ -2,4 +2,5 @@ build:
   tcomb:
     image: node:6
     commands:
+      - npm install
       - npm test

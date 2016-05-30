@@ -1,13 +1,14 @@
 {
   "name": "eslint-plugin-tcomb",
-  "version": "0.0.0",
-  "description": "A set of rules for tcomb",
+  "version": "0.1.0",
+  "description": "A set of ESLint rules for tcomb",
   "keywords": [
     "eslint",
     "eslintplugin",
-    "eslint-plugin"
+    "eslint-plugin",
+    "tcomb"
   ],
-  "author": "gabro",
+  "author": "buildo",
   "main": "lib/index.js",
   "scripts": {
     "test": "mocha tests --recursive"
@@ -16,7 +17,8 @@
     "requireindex": "~1.1.0"
   },
   "devDependencies": {
-    "eslint": "~2.6.0"
+    "eslint": "~2.6.0",
+    "mocha": "^2.5.3"
   },
   "engines": {
     "node": ">=0.10.0"
