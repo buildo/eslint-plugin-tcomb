@@ -2,7 +2,7 @@
 
 # eslint-plugin-tcomb
 
-A set of ESLint rules for [tcomb](https://github.com/gcanti/tcomb)
+A set of [ESLint](http://eslint.org) rules for [tcomb](https://github.com/gcanti/tcomb)
 
 ## Installation
 
