@@ -1,6 +1,8 @@
+[![Build Status](https://drone.our.buildo.io/api/badges/buildo/eslint-plugin-tcomb/status.svg)](https://drone.our.buildo.io/buildo/eslint-plugin-tcomb)
+
 # eslint-plugin-tcomb
 
-A set of rules for [tcomb](https://github.com/gcanti/tcomb)
+A set of ESLint rules for [tcomb](https://github.com/gcanti/tcomb)
 
 ## Installation
 
