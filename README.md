@@ -67,4 +67,4 @@ See [ESLint documentation](http://eslint.org/docs/user-guide/configuring#extendi
 
 The rules enabled in this configuration are:
 
-* [`no-unnamed-types`](docs/rules/no-unnamed-types.md): disallow types without names
+* [`no-unnamed-types`](docs/rules/no-unnamed-types.md)
