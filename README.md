@@ -43,4 +43,4 @@ Then configure the rules you want to use under the rules section.
 
 ## Supported Rules
 
-* `no-loose-structs`
+* [`no-loose-structs`](docs/rules/no-loose-structs.md): disallow loose structs
