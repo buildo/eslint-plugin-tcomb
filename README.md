@@ -1,6 +1,6 @@
 # eslint-plugin-tcomb
 
-A set of rules for tcomb
+A set of rules for [tcomb](https://github.com/gcanti/tcomb)
 
 ## Installation
 
