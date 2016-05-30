@@ -1,4 +1,4 @@
-[![Build Status](https://drone.our.buildo.io/api/badges/buildo/eslint-plugin-tcomb/status.svg)](https://drone.our.buildo.io/buildo/eslint-plugin-tcomb)
+[![Build Status](https://drone.our.buildo.io/api/badges/buildo/eslint-plugin-tcomb/status.svg)](https://drone.our.buildo.io/buildo/eslint-plugin-tcomb) [![npm](https://img.shields.io/npm/v/eslint-plugin-tcomb.svg?maxAge=2592000)](https://www.npmjs.com/package/eslint-plugin-tcomb)
 
 # eslint-plugin-tcomb
 
