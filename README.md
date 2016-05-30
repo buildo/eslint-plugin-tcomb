@@ -66,3 +66,5 @@ To enable this configuration use the `extends` property in your `.eslintrc` conf
 See [ESLint documentation](http://eslint.org/docs/user-guide/configuring#extending-configuration-files) for more information about extending configuration files.
 
 The rules enabled in this configuration are:
+
+* [`no-unnamed-types`](docs/rules/no-unnamed-types.md): disallow types without names
