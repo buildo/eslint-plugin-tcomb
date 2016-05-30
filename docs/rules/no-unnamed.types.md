@@ -40,7 +40,7 @@ The following patter is not supported, i.e. it goes unchecked:
 MyType.extend({ prop: t.String }, 'name')
 ```
 
-The reason is that there's no reliable (syntactical )way to tell this apart from a regular method call to an
+The reason is that there's no reliable (syntactical) way to tell this apart from a regular method call to an
 `extend` method. For example, the example above is syntactically equivalent to:
 
 ```js
