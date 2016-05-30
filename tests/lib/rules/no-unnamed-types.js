@@ -83,6 +83,11 @@ ruleTester.run('no-unnamed-types', rule, {
       options: [{ enabled: { struct: true } }]
     },
     {
+      code: 't.struct({}, { strict: true })',
+      errors: [ { message: 'struct must have a name' } ],
+      options: [{ enabled: { struct: true } }]
+    },
+    {
       code: 't.struct.extend([Type, {}])',
       errors: [ { message: 'struct must have a name' } ],
       options: [{ enabled: { struct: true } }]
@@ -126,7 +131,7 @@ ruleTester.run('no-unnamed-types', rule, {
       code: 't.func([A], B )',
       errors: [ { message: 'func must have a name' } ],
       options: [{ enabled: { func: true } }]
-    },
+    }
   ]
 });
 
