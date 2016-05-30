@@ -7,6 +7,9 @@ var ruleTester = new RuleTester();
 ruleTester.run('no-unnamed-types', rule, {
   valid: [
     {
+      code: 'foo(\'bar\')',
+    },
+    {
       code: 't.refinement(t.Number, function () { return true }, \'MyType\')',
     },
     {
