@@ -1,4 +1,4 @@
-# No unnamed types (no-unnamed-types)
+# No Any (no-any)
 
 `t.Any` is a dangerous type as it's equivalent to not having a type constraint.
 
