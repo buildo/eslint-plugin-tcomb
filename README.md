@@ -47,6 +47,7 @@ Then configure the rules you want to use under the rules section.
 
 * [`no-loose-structs`](docs/rules/no-loose-structs.md): disallow loose structs
 * [`no-unnamed-types`](docs/rules/no-unnamed-types.md): disallow types without names
+* [`no-any`](docs/rules/no-any.md): disallow use of `t.Any`
 
 ## Recommended configuration
 
@@ -68,3 +69,4 @@ See [ESLint documentation](http://eslint.org/docs/user-guide/configuring#extendi
 The rules enabled in this configuration are:
 
 * [`no-unnamed-types`](docs/rules/no-unnamed-types.md)
+* [`no-any`](docs/rules/no-any.md)
