@@ -1,7 +1,7 @@
 'use strict';
 
 var rule = require('../../../lib/rules/no-unnamed-types.js');
-var RuleTester = require('eslint').RuleTester;
+var RuleTester = require('../RuleTester');
 
 var ruleTester = new RuleTester();
 ruleTester.run('no-unnamed-types', rule, {
