@@ -7,21 +7,40 @@ var ruleTester = new RuleTester();
 ruleTester.run('no-any', rule, {
   valid: [
     {
-      code: 't.struct({ bar: t.String })',
+      code: [
+        'var t = require("tcomb");',
+        't.struct({ foo: t.String });'
+      ].join('\n'),
+    },
+    {
+      code: [
+        'import t from "tcomb"',
+        't.struct({ foo: t.String });'
+      ].join('\n'),
+      parser: 'babel-eslint'
     }
   ],
 
   invalid: [
     {
-      code: 't.struct({ foo: t.Any })',
+      code: [
+        'var t = require("tcomb");',
+        't.struct({ foo: t.Any });'
+      ].join('\n'),
       errors: [ { message: 'unexpected use of t.Any' } ],
     },
     {
-      code: 't.maybe(t.Any)',
+      code: [
+        'var t = require("tcomb");',
+        't.maybe(t.Any);'
+      ].join('\n'),
       errors: [ { message: 'unexpected use of t.Any' } ],
     },
     {
-      code: 't.Any',
+      code: [
+        'var t = require("tcomb");',
+        't.Any;'
+      ].join('\n'),
       errors: [ { message: 'unexpected use of t.Any' } ],
     }
   ]
