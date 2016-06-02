@@ -49,6 +49,61 @@ Then configure the rules you want to use under the rules section.
 * [`no-unnamed-types`](docs/rules/no-unnamed-types.md): disallow types without names
 * [`no-any`](docs/rules/no-any.md): disallow use of `t.Any`
 
+## Namespace detection
+In order to recognize `tcomb` patterns, this plugin detects the name of the imported `tcomb` library.
+
+Example:
+
+```js
+import foo from 'tcomb';
+
+const MyType = foo.Any; // this triggers the no-any rule
+```
+
+In the example above `foo` is identified as the *`tcomb` namespace*;
+
+Both ES2015 modules and `require` are supported, in any of the following forms:
+
+```js
+import anything from 'tcomb';
+import { t } from 'tcomb-react';
+import { t as anything } from 'tcomb-react';
+const anything = require('tcomb');
+const anything = require('tcomb-react').t
+```
+
+`tcomb` can be exported by any module; the recommended configuration (see below), provides
+out-of-the-box support for the following modules:
+
+- `tcomb`
+- `tcomb-validation`
+- `tcomb-form`,
+- `tcomb-form-native`,
+- `tcomb-react`,
+- `redux-tcomb`
+
+If you want your own custom module to be recognized, simply add this to your eslint config:
+
+```json
+{
+  "settings": {
+    "additionalTcombModules": [{
+      "name": "my-module",
+      "defaultExport": true
+    }, {
+      "name": "my-other-module",
+      "defaultExport": false,
+      "exportName": "t"
+    }]
+  }
+}
+```
+
+where:
+- `name` is the module name
+- `defaultExport` indicates whether `tcomb` is exported as the module default
+- `exportName` is the name under which `tcomb` is exported if `defaultExport` is `false`
+
 ## Recommended configuration
 
 This plugin exports a `recommended` configuration that enforce a disciplined tcomb use.
