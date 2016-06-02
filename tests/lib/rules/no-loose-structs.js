@@ -7,28 +7,42 @@ var ruleTester = new RuleTester();
 ruleTester.run('no-loose-structs', rule, {
   valid: [
     {
-      code: 't.struct({}, { strict: true })',
+      code: [
+        'var t = require("tcomb");',
+        't.struct({}, { strict: true })'
+      ].join('\n')
     },
     {
-      code: 't.struct({}, { strict: false })',
+      code: [
+        'var t = require("tcomb");',
+        't.struct({}, { strict: false })'
+      ].join('\n'),
       options: [{ allowExplicit: true }]
     }
   ],
 
   invalid: [
     {
-      code: 't.struct({})',
+      code: [
+        'var t = require("tcomb");',
+        't.struct({})'
+      ].join('\n'),
       errors: [ { message: 'use of loose tcomb structs is forbidden. Add option \'{ strict: true }\'' } ],
     },
     {
-      code: 't.struct({})',
+      code: [
+        'var t = require("tcomb");',
+        't.struct({})'
+      ].join('\n'),
       errors: [ { message: 'use of loose tcomb structs is forbidden. Add option \'{ strict: true }\'' } ],
       options: [{ allowExplicit: true }]
     },
     {
-      code: 't.struct({}, { strict: false })',
+      code: [
+        'var t = require("tcomb");',
+        't.struct({}, { strict: false })'
+      ].join('\n'),
       errors: [ { message: 'use of loose tcomb structs is forbidden' } ],
     }
   ]
 });
-
