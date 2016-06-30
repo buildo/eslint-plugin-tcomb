@@ -34,7 +34,7 @@ const MyType = t.struct({ prop: t.String });
 ```
 
 ## Caveat
-The following patter is not supported, i.e. it goes unchecked:
+The following pattern is not supported, i.e. it goes unchecked:
 
 ```js
 MyType.extend({ prop: t.String }, 'name')
